@@ -1,0 +1,53 @@
+﻿@model CloudFlashCard.Web.Models.NewTopicViewModel
+
+@{
+    ViewData["Title"] = "New Topic";
+}
+
+<script>
+    $(function () {
+        $("#Name").focus();
+    });
+</script>
+
+<div>&nbsp;</div>
+
+<div class="row col-sm-12">
+    @if (ViewData.ModelState[""] != null && ViewData.ModelState[""].Errors.Count > 0)
+    {
+        <div class="alert alert-danger col-sm-12" role="alert" id="login-alert-modelstate-error">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            @Html.ValidationSummary(true, "Errors: ")
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger col-sm-12" role="alert" id="login-alert-error">@ViewBag.Error</div>
+    }
+
+    @if (ViewBag.Success != null)
+    {
+        <div class="alert alert-success col-sm-12" role="alert" id="login-alert-success">@ViewBag.Success</div>
+    }
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <form asp-controller="dashboard"
+              asp-action="newtopic"
+              asp-route-returnurl="@ViewBag.ReturnUrl"
+              method="post"
+              class="form-horizontal"
+              role="form"
+              id="SignupForm">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" id="Name" name="Name" aria-describedby="nameHelp" placeholder="Enter new topic name">
+                <small id="nameHelp" class="form-text text-muted">&nbsp;</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

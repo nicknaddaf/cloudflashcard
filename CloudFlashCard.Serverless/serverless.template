@@ -1,0 +1,92 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Transform" : "AWS::Serverless-2016-10-31",
+  "Description" : "AWS Serverless API that exposes the add, remove and get operations for a CloudFlashCard Amazon DynamoDB.",
+  "Parameters" : {
+  },
+
+  "Resources" : {
+
+	"GetTopicsPerUserAsync" : {
+	  "Type" : "AWS::Serverless::Function",
+	  "Properties": {
+		"Handler": "CloudFlashCard.Serverless::CloudFlashCard.Serverless.TopicFunctions::GetTopicsPerUserAsync",
+		"Runtime": "dotnetcore2.1",
+		"CodeUri": "",
+		"Description": "Function to get a list of topics per user",
+		"MemorySize": 256,
+		"Timeout": 30,
+		"Role": null,
+		"Policies": [ "AWSLambdaFullAccess" ]
+	  }
+	},
+	"GetTopicAsync" : {
+	  "Type" : "AWS::Serverless::Function",
+	  "Properties": {
+		"Handler": "CloudFlashCard.Serverless::CloudFlashCard.Serverless.TopicFunctions::GetTopicAsync",
+		"Runtime": "dotnetcore2.1",
+		"CodeUri": "",
+		"Description": "Function to get a specific topic by id",
+		"MemorySize": 256,
+		"Timeout": 30,
+		"Role": null,
+		"Policies": [ "AWSLambdaFullAccess" ]
+	  }
+	},
+	"CreateTopicAsync" : {
+	  "Type" : "AWS::Serverless::Function",
+	  "Properties": {
+		"Handler": "CloudFlashCard.Serverless::CloudFlashCard.Serverless.TopicFunctions::CreateTopicAsync",
+		"Runtime": "dotnetcore2.1",
+		"CodeUri": "",
+		"Description": "Function to create a new topic",
+		"MemorySize": 256,
+		"Timeout": 30,
+		"Role": null,
+		"Policies": [ "AWSLambdaFullAccess" ]
+	  }
+	},
+	"GetFlashCardsPerTopicAsync" : {
+	  "Type" : "AWS::Serverless::Function",
+	  "Properties": {
+		"Handler": "CloudFlashCard.Serverless::CloudFlashCard.Serverless.CardFunctions::GetFlashCardsPerTopicAsync",
+		"Runtime": "dotnetcore2.1",
+		"CodeUri": "",
+		"Description": "Function to get flash cards by topic",
+		"MemorySize": 256,
+		"Timeout": 30,
+		"Role": null,
+		"Policies": [ "AWSLambdaFullAccess" ]
+	  }
+	},
+	"GetFlashCardAsync" : {
+	  "Type" : "AWS::Serverless::Function",
+	  "Properties": {
+		"Handler": "CloudFlashCard.Serverless::CloudFlashCard.Serverless.CardFunctions::GetFlashCardAsync",
+		"Runtime": "dotnetcore2.1",
+		"CodeUri": "",
+		"Description": "Function to get a flash card by id",
+		"MemorySize": 256,
+		"Timeout": 30,
+		"Role": null,
+		"Policies": [ "AWSLambdaFullAccess" ]
+	  }
+	},
+	"CreateFlashCardAsync" : {
+	  "Type" : "AWS::Serverless::Function",
+	  "Properties": {
+		"Handler": "CloudFlashCard.Serverless::CloudFlashCard.Serverless.CardFunctions::CreateFlashCardAsync",
+		"Runtime": "dotnetcore2.1",
+		"CodeUri": "",
+		"Description": "Function to create a new flash card",
+		"MemorySize": 256,
+		"Timeout": 30,
+		"Role": null,
+		"Policies": [ "AWSLambdaFullAccess" ]
+	  }
+	}
+  },
+
+	"Outputs" : {
+	}
+}

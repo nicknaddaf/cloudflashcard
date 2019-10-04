@@ -1,0 +1,47 @@
+﻿@model List<CloudFlashCard.Web.Models.FlashCard>
+
+@{
+    ViewData["Title"] = "Cards By Topic";
+
+    string topicId = string.Empty;
+
+    if (ViewBag.TopicId != null)
+    {
+        topicId = ViewBag.TopicId;
+    }
+}
+
+
+<div class="row col-md-12">
+    <div class="d-block mt-3">
+        <a href="@Url.Action("newcard", "dashboard", new { id = topicId })">Create New Card</a>
+    </div>
+</div>
+
+<div>&nbsp;</div>
+
+<div class="row">
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text">@item.Content.Value</p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="@Url.Action("viewcard", "dashboard", new { id = item.CardId.Value})" class="btn btn-sm btn-outline-secondary" role="button">Details</a>
+                                <a href="@Url.Action("editcard", "dashboard", new { id = item.CardId.Value})" class="btn btn-sm btn-outline-secondary" role="button">Edit</a>
+                            </div>
+
+                            <small class="text-muted">@item.CreateDate.Value</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudFlashCard.Serverless", "CloudFlashCard.Serverless\CloudFlashCard.Serverless.csproj", "{52DD3DBD-6275-44FC-AE6F-513D210089BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFlashCard.Web", "CloudFlashCard.Web\CloudFlashCard.Web.csproj", "{D89C3BA1-BD7B-4198-920D-689D03E5A016}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52DD3DBD-6275-44FC-AE6F-513D210089BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DD3DBD-6275-44FC-AE6F-513D210089BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DD3DBD-6275-44FC-AE6F-513D210089BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DD3DBD-6275-44FC-AE6F-513D210089BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89C3BA1-BD7B-4198-920D-689D03E5A016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89C3BA1-BD7B-4198-920D-689D03E5A016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89C3BA1-BD7B-4198-920D-689D03E5A016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89C3BA1-BD7B-4198-920D-689D03E5A016}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37646377-0BFD-480D-AE84-499BB4388565}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://awsdemos.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CloudFlashCard.Serverless\\CloudFlashCard.Serverless.csproj
+		SccProjectName1 = CloudFlashCard.Serverless
+		SccLocalPath1 = CloudFlashCard.Serverless
+		SccProjectUniqueName2 = CloudFlashCard.Web\\CloudFlashCard.Web.csproj
+		SccProjectName2 = CloudFlashCard.Web
+		SccLocalPath2 = CloudFlashCard.Web
+	EndGlobalSection
+EndGlobal
